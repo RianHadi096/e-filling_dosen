@@ -72,7 +72,7 @@
                 <span class="text-sm font-semibold text-gray-800">Histori E-Filling Dosen</span>
             </a>
 
-            <a href="#" class="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-100 transition group">
+            <a href="{{ route('admin/verifikasi_file') }}" class="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-100 transition group">
                 <div class="p-1 border rounded-md bg-white">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.133-.641-2.104-1.5-2.502A2.25 2.25 0 0 0 15.75 2.25H5.25A2.25 2.25 0 0 0 3 4.5v11.25m18 0-3-3m0 0-3 3m3 3V15" />
@@ -108,7 +108,7 @@
             <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
                 <p class="text-slate-400 text-xs font-bold uppercase mb-2">Total Submisi</p>
                 <p class="text-3xl font-black text-slate-800">1,240</p>
-                <div class="mt-2 text-[11px] text-green-500 font-bold">+12% dari bulan lalu</div>
+                <div class="mt-2 text-[11px] text-green-500 font-bold">##</div>
             </div>
             <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
                 <p class="text-slate-400 text-xs font-bold uppercase mb-2">Perlu Review</p>
@@ -118,7 +118,7 @@
             <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
                 <p class="text-slate-400 text-xs font-bold uppercase mb-2">Dosen Aktif</p>
                 <p class="text-3xl font-black text-slate-800">412</p>
-                <div class="mt-2 text-[11px] text-blue-500 font-medium">95% dari total dosen</div>
+                <div class="mt-2 text-[11px] text-blue-500 font-medium">##</div>
             </div>
             <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
                 <p class="text-slate-400 text-xs font-bold uppercase mb-2">Ditolak</p>

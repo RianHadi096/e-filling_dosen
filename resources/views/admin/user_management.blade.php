@@ -3,55 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verifikasi Dokumen | Admin E-Filling</title>
+    <title>User Management | Admin E-Filling</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
-<style>
-<style>
-        body { font-family: 'Inter', sans-serif; }
-        aside {
-            transition: all 0.2s ease;
-        }
-        aside.collapsed {
-            width: 0;
-            overflow: hidden;
-        }
-        aside.icon-only {
-            width: 80px;
-        }
-        aside.icon-only span {
-            display: none;
-        }
-        aside.icon-only .px-4 {
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
-        }
-        aside:hover .close-btn {
-            opacity: 1;
-        }
-        @media (max-width: 768px) {
-            aside {
-                position: fixed;
-                left: 0;
-                top: 0;
-                height: 100vh;
-                z-index: 40;
-                width: 256px;
-            }
-            aside.collapsed {
-                width: 0;
-            }
-            body {
-                flex-wrap: wrap;
-            }
-            main {
-                width: 100%;
-            }
-        }
-    </style>
-<body class="bg-gray-50 flex min-h-screen text-slate-800">
+<body class="bg-gray-50 flex min-h-screen">
 
     <aside class="w-64 border-r bg-white flex flex-col py-6 shadow-sm relative" id="sidebar">
         
@@ -99,97 +56,113 @@
     </aside>
 
     <main class="flex-1 p-8 overflow-y-auto">
-        <header class="mb-8 flex justify-between items-end">
+        <header class="mb-8 flex justify-between items-center">
             <div>
-                <h1 class="text-2xl font-bold text-slate-800">Antrean Verifikasi</h1>
-                <p class="text-slate-500 text-sm">Terdapat <span class="font-bold text-blue-600">8 dokumen</span> yang perlu Anda tinjau hari ini.</p>
+                <h1 class="text-2xl font-bold text-slate-800">Manajemen Pengguna</h1>
+                <p class="text-slate-500 text-sm">Kelola akses akun dosen dan staf administrasi.</p>
             </div>
-            
-            <div class="flex gap-2">
-                <select class="bg-white border border-gray-200 text-sm px-4 py-2 rounded-lg outline-none focus:ring-2 focus:ring-blue-500">
-                    <option>Semua Kategori</option>
-                    <option>Jurnal</option>
-                    <option>Sertifikasi</option>
-                </select>
-                <input type="text" placeholder="Cari Nama Dosen..." class="bg-white border border-gray-200 text-sm px-4 py-2 rounded-lg outline-none focus:ring-2 focus:ring-blue-500 w-64">
-            </div>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl font-bold text-sm transition flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                Tambah User Baru
+            </button>
         </header>
 
+        <div class="grid grid-cols-3 gap-6 mb-8 text-center">
+            <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
+                <p class="text-xs text-gray-400 font-bold uppercase tracking-widest">Total User</p>
+                <p class="text-2xl font-bold text-gray-800">452</p>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
+                <p class="text-xs text-gray-400 font-bold uppercase tracking-widest">User Aktif</p>
+                <p class="text-2xl font-bold text-green-500">448</p>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
+                <p class="text-xs text-gray-400 font-bold uppercase tracking-widest">Akun Ditangguhkan</p>
+                <p class="text-2xl font-bold text-red-500">4</p>
+            </div>
+        </div>
+
         <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
-            <table class="w-full text-left border-collapse">
+            <div class="p-6 border-b border-gray-50 flex justify-between items-center bg-gray-50/30">
+                <h3 class="font-bold text-slate-700">Daftar Pengguna Sistem</h3>
+                <div class="relative">
+                    <input type="text" placeholder="Cari nama atau NIDN..." class="pl-10 pr-4 py-2 border rounded-xl text-sm focus:ring-2 focus:ring-blue-500 outline-none w-72 transition">
+                    <svg class="w-4 h-4 absolute left-3 top-2.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+            </div>
+            <table class="w-full text-left">
                 <thead>
-                    <tr class="bg-gray-50 border-b border-gray-100">
-                        <th class="px-6 py-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest">Info Dosen</th>
-                        <th class="px-6 py-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest">Detail Dokumen</th>
-                        <th class="px-6 py-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest text-center">Berkas</th>
-                        <th class="px-6 py-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest text-center">Aksi Verifikasi</th>
+                    <tr class="text-[11px] font-bold text-gray-400 uppercase tracking-widest border-b border-gray-50">
+                        <th class="px-6 py-4">User / Dosen</th>
+                        <th class="px-6 py-4">Role</th>
+                        <th class="px-6 py-4 text-center">Status</th>
+                        <th class="px-6 py-4 text-right">Aksi</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-50">
-                    
                     <tr class="hover:bg-gray-50/50 transition">
-                        <td class="px-6 py-5">
-                            <div class="font-bold text-slate-700 text-sm">Dr. Ahmad Faisal</div>
-                            <div class="text-[11px] text-slate-400 font-medium">NIDN: 041208xxxx</div>
-                            <div class="mt-1 text-[10px] bg-slate-100 inline-block px-2 py-0.5 rounded text-slate-500">Teknik Informatika</div>
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs">BS</div>
+                                <div>
+                                    <div class="font-bold text-slate-700 text-sm">Budi Santoso, M.T.</div>
+                                    <div class="text-[11px] text-slate-400 italic font-mono">budi.santoso@univ.ac.id</div>
+                                </div>
+                            </div>
                         </td>
-                        <td class="px-6 py-5">
-                            <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-100 text-blue-700 uppercase">Jurnal</span>
-                            <div class="mt-2 font-semibold text-slate-700 text-sm">Optimasi CNN pada Klasifikasi Gambar</div>
-                            <div class="text-[11px] text-slate-400 italic">Diunggah: 12 Jan 2026, 14:20</div>
+                        <td class="px-6 py-4">
+                            <span class="px-3 py-1 rounded-lg bg-blue-50 text-blue-600 text-[10px] font-bold uppercase">Dosen Tetap</span>
                         </td>
-                        <td class="px-6 py-5 text-center">
-                            <button class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-bold text-xs bg-blue-50 px-3 py-2 rounded-lg transition">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                                Pratinjau
-                            </button>
+                        <td class="px-6 py-4 text-center">
+                            <span class="text-green-500 font-bold text-[10px] flex items-center justify-center gap-1">
+                                <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span> AKTIF
+                            </span>
                         </td>
-                        <td class="px-6 py-5">
-                            <div class="flex justify-center gap-2">
-                                <button class="bg-green-500 hover:bg-green-600 text-white text-[11px] font-bold px-4 py-2 rounded-lg transition shadow-sm shadow-green-100">SETUJUI</button>
-                                <button class="bg-white border border-red-200 text-red-600 hover:bg-red-50 text-[11px] font-bold px-4 py-2 rounded-lg transition">TOLAK</button>
+                        <td class="px-6 py-4 text-right">
+                            <div class="flex justify-end gap-3">
+                                <button class="text-gray-400 hover:text-blue-600 transition" title="Ubah Peran">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                                </button>
+                                <button class="text-gray-400 hover:text-red-600 transition" title="Suspend Akun">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
+                                </button>
                             </div>
                         </td>
                     </tr>
-
                     <tr class="hover:bg-gray-50/50 transition">
-                        <td class="px-6 py-5">
-                            <div class="font-bold text-slate-700 text-sm">Siti Aminah, M.Kom.</div>
-                            <div class="text-[11px] text-slate-400 font-medium">NIDN: 040510xxxx</div>
-                            <div class="mt-1 text-[10px] bg-slate-100 inline-block px-2 py-0.5 rounded text-slate-500">Sistem Informasi</div>
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-xs">SA</div>
+                                <div>
+                                    <div class="font-bold text-slate-700 text-sm">Siti Aminah, M.Kom.</div>
+                                    <div class="text-[11px] text-slate-400 italic font-mono">siti.aminah@univ.ac.id</div>
+                                </div>
+                            </div>
                         </td>
-                        <td class="px-6 py-5">
-                            <span class="text-[10px] font-bold px-2 py-1 rounded bg-purple-100 text-purple-700 uppercase">Sertifikasi</span>
-                            <div class="mt-2 font-semibold text-slate-700 text-sm">Google Cloud Professional Architect</div>
-                            <div class="text-[11px] text-slate-400 italic">Diunggah: 13 Jan 2026, 09:15</div>
+                        <td class="px-6 py-4">
+                            <span class="px-3 py-1 rounded-lg bg-purple-50 text-purple-600 text-[10px] font-bold uppercase">Admin Fakultas</span>
                         </td>
-                        <td class="px-6 py-5 text-center">
-                            <button class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-bold text-xs bg-blue-50 px-3 py-2 rounded-lg transition">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                                Pratinjau
-                            </button>
+                        <td class="px-6 py-4 text-center">
+                            <span class="text-green-500 font-bold text-[10px] flex items-center justify-center gap-1">
+                                <span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span> AKTIF
+                            </span>
                         </td>
-                        <td class="px-6 py-5">
-                            <div class="flex justify-center gap-2">
-                                <button class="bg-green-500 hover:bg-green-600 text-white text-[11px] font-bold px-4 py-2 rounded-lg transition shadow-sm shadow-green-100">SETUJUI</button>
-                                <button class="bg-white border border-red-200 text-red-600 hover:bg-red-50 text-[11px] font-bold px-4 py-2 rounded-lg transition">TOLAK</button>
+                        <td class="px-6 py-4 text-right">
+                            <div class="flex justify-end gap-3">
+                                <button class="text-gray-400 hover:text-blue-600 transition" title="Ubah Peran">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                                </button>
+                                <button class="text-gray-400 hover:text-red-600 transition" title="Suspend Akun">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
+                                </button>
                             </div>
                         </td>
                     </tr>
-
                 </tbody>
             </table>
         </div>
-
-        <div class="mt-6 flex justify-between items-center text-sm text-slate-500 font-medium px-2">
-            <div>Menampilkan 1-8 dari 24 Antrean</div>
-            <div class="flex gap-2">
-                <button class="px-4 py-2 border rounded-lg bg-white hover:bg-gray-50 transition">Sebelumnya</button>
-                <button class="px-4 py-2 border rounded-lg bg-white hover:bg-gray-50 transition">Selanjutnya</button>
-            </div>
-        </div>
     </main>
-    <script>
+<script>
         const sidebar = document.getElementById('sidebar');
         let sidebarVisible = true;
         let isIconOnly = false;

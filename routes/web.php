@@ -14,9 +14,11 @@ use App\Http\Controllers\LoginController;
 Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin/dashboard');
 Route::get('/admin/histori_e-filling_dosen', [AdminController::class, 'historiEfillingDosen'])->name('admin/histori_e-filling_dosen');
 Route::get('/admin/login', [LoginController::class, 'adminLogin'])->name('/admin/login');
+Route::get('/admin/verifikasi_file', [AdminController::class, 'verifikasiFile'])->name('admin/verifikasi_file');
 Route::post('/admin/login/authenticate', [LoginController::class, 'authenticateAdmin'])->name('/admin/login/authenticate');
 Route::post('/admin/logout', [LoginController::class, 'logout'])->name('/admin/logout');
 
+Route::get('/admin/user_management', [AdminController::class, 'userManagement'])->name('admin/user_management');
 
 //DOSEN
 Route::get('/dosen/dashboard', [DosenController::class, 'dashboard'])->name('dosen/dashboard');

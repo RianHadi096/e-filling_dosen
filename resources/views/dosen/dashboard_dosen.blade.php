@@ -121,7 +121,7 @@
                 <h1 class="text-2xl font-bold text-gray-800">Halo, Pak Budi!</h1>
                 <p class="text-gray-500">Berikut progres pengisian e-filling Anda bulan ini.</p>
             </div>
-            <button class="bg-blue-600 text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-lg shadow-blue-100">+ Tambah Dokumen</button>
+            <button class="bg-blue-600 text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-lg shadow-blue-100" onclick="window.location.href='{{ route('dosen/upload_file') }}'">+ Tambah Dokumen</button>
         </header>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">

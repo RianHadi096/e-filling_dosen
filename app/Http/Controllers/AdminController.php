@@ -12,4 +12,10 @@ class AdminController extends Controller
     public function historiEfillingDosen(){
         return view('admin.histori_e-filling_dosen');
     }
+    public function verifikasiFile(){
+        return view('admin.verifikasi');
+    }
+    public function userManagement(){
+        return view('admin.user_management');
+    }
 }

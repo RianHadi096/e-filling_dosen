@@ -112,6 +112,7 @@
                 <span class="text-sm font-semibold text-gray-800">Profil</span>
             </a>
         </div>
+
     </aside>
 
     <main class="flex-1 p-10">
@@ -128,11 +129,15 @@
                 <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm">
                     <div class="grid grid-cols-2 gap-6">
                         <div class="col-span-2">
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">Judul Dokumen / Nama Kegiatan</label>
-                            <input type="text" name="title" placeholder="Contoh: Jurnal Internasional Scopus Q1 - Penerapan AI" 
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Judul Dokumen</label>
+                            <input type="text" name="title" placeholder="Contoh: Penerapan AI" 
                                 class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none transition">
                         </div>
-
+                        <div class="col-span-2">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Nama Kegiatan</label>
+                            <input type="text" name="title" placeholder="Contoh: Jurnal Internasional" 
+                                class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none transition">
+                        </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">Kategori Tridarma</label>
                             <select name="category" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none transition bg-white text-gray-600">
@@ -171,12 +176,12 @@
                 </div>
 
                 <div class="flex justify-end gap-4">
-                    <button type="button" class="px-8 py-3 rounded-xl text-gray-500 font-semibold hover:bg-gray-100 transition">Batalkan</button>
                     <button type="submit" class="px-10 py-3 bg-blue-600 text-white rounded-xl font-bold shadow-lg shadow-blue-200 hover:bg-blue-700 transition">Unggah Sekarang</button>
                 </div>
             </form>
         </div>
     </main>
+
     <script>
         const sidebar = document.getElementById('sidebar');
         let sidebarVisible = true;
