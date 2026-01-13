@@ -6,9 +6,13 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
-    public function login()
+    public function dosenLogin()
     {
-        return view('login');
+        return view('dosen.login_dosen');
+    }
+    public function adminLogin()
+    {
+        return view('admin.login_admin');
     }
 
     public function authenticate(Request $request)

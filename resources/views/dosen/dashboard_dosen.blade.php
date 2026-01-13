@@ -115,62 +115,93 @@
 
     </aside>
 
-    <main class="flex-1 p-8">
-        <header class="mb-8">
-            <h1 class="text-2xl font-bold text-gray-800">Monitoring Dokumen Akademik</h1>
-            <p class="text-gray-500 text-sm">Kelola jurnal, publikasi, dan sertifikasi Anda di sini.</p>
+    <main class="flex-1 p-8 overflow-y-auto">
+        <header class="flex justify-between items-center mb-8">
+            <div>
+                <h1 class="text-2xl font-bold text-gray-800">Halo, Pak Budi!</h1>
+                <p class="text-gray-500">Berikut progres pengisian e-filling Anda bulan ini.</p>
+            </div>
+            <button class="bg-blue-600 text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-lg shadow-blue-100">+ Tambah Dokumen</button>
         </header>
 
-        <div class="flex gap-4 mb-6">
-            <button class="px-5 py-2 bg-blue-600 text-white rounded-full text-xs font-semibold shadow-sm">Semua Dokumen</button>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="p-2 bg-green-50 text-green-600 rounded-lg uppercase text-[10px] font-bold tracking-wider">Tervalidasi</span>
+                    <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-800">12</h3>
+                <p class="text-gray-500 text-sm">Dokumen disetujui</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="p-2 bg-yellow-50 text-yellow-600 rounded-lg uppercase text-[10px] font-bold tracking-wider">Menunggu</span>
+                    <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-800">04</h3>
+                <p class="text-gray-500 text-sm">Sedang direview</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="p-2 bg-red-50 text-red-600 rounded-lg uppercase text-[10px] font-bold tracking-wider">Perlu Revisi</span>
+                    <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-800">01</h3>
+                <p class="text-gray-500 text-sm">Dokumen ditolak</p>
+            </div>
         </div>
 
-        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
-            <table class="w-full text-left border-collapse">
-                <thead class="bg-gray-50 border-b border-gray-200">
+        <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm mb-8">
+            <div class="flex justify-between items-end mb-4">
+                <div>
+                    <h3 class="font-bold text-gray-800 text-lg">Kelengkapan Tridarma</h3>
+                    <p class="text-sm text-gray-500">Target penyelesaian: 20 Januari 2026</p>
+                </div>
+                <span class="text-2xl font-bold text-blue-600">75%</span>
+            </div>
+            <div class="w-full bg-gray-100 rounded-full h-4">
+                <div class="bg-blue-600 h-4 rounded-full transition-all duration-500" style="width: 75%"></div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+            <div class="p-6 border-b border-gray-50 flex justify-between items-center">
+                <h3 class="font-bold text-gray-800">Riwayat Unggahan Terakhir</h3>
+                <a href="#" class="text-blue-600 text-sm font-medium hover:underline">Lihat Semua</a>
+            </div>
+            <table class="w-full text-left">
+                <thead class="bg-gray-50 text-[11px] uppercase text-gray-400 font-bold tracking-widest">
                     <tr>
-                        <th class="p-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Nama Dokumen / Judul</th>
-                        <th class="p-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Kategori</th>
-                        <th class="p-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Tanggal Unggah</th>
-                        <th class="p-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Status Verifikasi</th>
-                        <th class="p-4 text-xs font-semibold text-gray-500 uppercase tracking-wider text-center">Aksi</th>
+                        <th class="px-6 py-4">Nama Dokumen</th>
+                        <th class="px-6 py-4">Kategori</th>
+                        <th class="px-6 py-4 text-center">Status</th>
+                        <th class="px-6 py-4 text-right">Aksi</th>
                     </tr>
                 </thead>
-                <tbody class="divide-y divide-gray-100">
-                    <tr class="hover:bg-gray-50 transition">
-                        <td class="p-4">
-                            <div class="font-medium text-gray-800 text-sm">Analisis Algoritma Optimasi pada AI</div>
-                            <div class="text-xs text-gray-400">Jurnal Internasional Scopus Q1</div>
+                <tbody class="divide-y divide-gray-50">
+                    <tr class="hover:bg-gray-50/50 transition">
+                        <td class="px-6 py-4">
+                            <p class="text-sm font-semibold text-gray-800">Sertifikat Oracle Java Professional</p>
+                            <p class="text-[11px] text-gray-400 font-mono italic">Sertif_Java_2025.pdf</p>
                         </td>
-                        <td class="p-4 text-sm text-gray-600">Publikasi Ilmiah</td>
-                        <td class="p-4 text-sm text-gray-600">12 Jan 2026</td>
-                        <td class="p-4">
-                            <span class="px-3 py-1 text-[10px] font-bold uppercase bg-green-100 text-green-700 rounded-full">Selesai</span>
+                        <td class="px-6 py-4 text-sm text-gray-600">Sertifikasi</td>
+                        <td class="px-6 py-4">
+                            <div class="flex justify-center">
+                                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-tighter">Verified</span>
+                            </div>
                         </td>
-                        <td class="p-4 text-center text-blue-500 hover:underline text-sm cursor-pointer">Lihat File</td>
-                    </tr>
-                    <tr class="hover:bg-gray-50 transition">
-                        <td class="p-4 text-sm font-medium text-gray-800">Sertifikasi Cloud Architecture (AWS)</td>
-                        <td class="p-4 text-sm text-gray-600">Sertifikasi</td>
-                        <td class="p-4 text-sm text-gray-600">10 Jan 2026</td>
-                        <td class="p-4">
-                            <span class="px-3 py-1 text-[10px] font-bold uppercase bg-yellow-100 text-yellow-700 rounded-full">Dalam Proses</span>
+                        <td class="px-6 py-4 text-right">
+                            <button class="text-gray-400 hover:text-blue-600 transition">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            </button>
                         </td>
-                        <td class="p-4 text-center text-blue-500 hover:underline text-sm cursor-pointer">Lihat File</td>
-                    </tr>
-                    <tr class="hover:bg-gray-50 transition">
-                        <td class="p-4 text-sm font-medium text-gray-800">Pelatihan IT bagi UMKM Desa Sukamaju</td>
-                        <td class="p-4 text-sm text-gray-600">Pengabdian</td>
-                        <td class="p-4 text-sm text-gray-600">05 Jan 2026</td>
-                        <td class="p-4">
-                            <span class="px-3 py-1 text-[10px] font-bold uppercase bg-red-100 text-red-700 rounded-full">Tertunda</span>
-                        </td>
-                        <td class="p-4 text-center text-blue-500 hover:underline text-sm cursor-pointer">Re-Upload</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </main>
+</body>
+
     <script>
         const sidebar = document.getElementById('sidebar');
         let sidebarVisible = true;
@@ -206,5 +237,4 @@
         });
 
     </script>
-</body>
 </html>

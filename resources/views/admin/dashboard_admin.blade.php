@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard E-Filling Dosen</title>
+    <title>Dasbor E-Filling Dosen (Admin)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -82,37 +82,90 @@
 
     </aside>
 
-    <main class="flex-1 p-8">
-        
-        <div class="grid grid-cols-4 gap-6 mb-8">
-            <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center">
-                <p class="text-gray-500 text-sm font-medium mb-4">Total Dosen</p>
-                <h2 class="text-4xl font-semibold">##</h2>
-            </div>
-            <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center">
-                <p class="text-gray-500 text-sm font-medium mb-4">Pengisian Selesai</p>
-                <h2 class="text-4xl font-semibold">##</h2>
-            </div>
-            <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center">
-                <p class="text-gray-500 text-sm font-medium mb-4">Dalam Proses</p>
-                <h2 class="text-4xl font-semibold">##</h2>
-            </div>
-            <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center">
-                <p class="text-gray-500 text-sm font-medium mb-4">Tertunda</p>
-                <h2 class="text-4xl font-semibold">##</h2>
+    <main class="flex-1 p-10">
+        <div class="flex justify-between items-center mb-10">
+            <h2 class="text-2xl font-bold text-slate-800">Ringkasan Aktivitas</h2>
+            <div class="flex items-center gap-4">
+                <span class="text-sm text-slate-500 italic">Terakhir diperbarui: 13 Jan 2026</span>
+                <div class="w-10 h-10 bg-slate-200 rounded-full border-2 border-white shadow-sm flex items-center justify-center font-bold text-slate-600">A</div>
             </div>
         </div>
 
-        <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm mb-8">
-            <h3 class="text-gray-700 font-medium mb-6">Proses Pengisian Formulir</h3>
-            <div class="w-full bg-gray-100 rounded-full h-8 relative overflow-hidden">
-                <div class="bg-green-500 h-full rounded-full flex items-center justify-center text-white font-bold text-sm" style="width: 80%">
-                    80%
+        <div class="grid grid-cols-4 gap-6 mb-10">
+            <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
+                <p class="text-slate-400 text-xs font-bold uppercase mb-2">Total Submisi</p>
+                <p class="text-3xl font-black text-slate-800">1,240</p>
+                <div class="mt-2 text-[11px] text-green-500 font-bold">+12% dari bulan lalu</div>
+            </div>
+            <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
+                <p class="text-slate-400 text-xs font-bold uppercase mb-2">Perlu Review</p>
+                <p class="text-3xl font-black text-amber-500">84</p>
+                <div class="mt-2 text-[11px] text-slate-400 font-medium italic">Segera verifikasi</div>
+            </div>
+            <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
+                <p class="text-slate-400 text-xs font-bold uppercase mb-2">Dosen Aktif</p>
+                <p class="text-3xl font-black text-slate-800">412</p>
+                <div class="mt-2 text-[11px] text-blue-500 font-medium">95% dari total dosen</div>
+            </div>
+            <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
+                <p class="text-slate-400 text-xs font-bold uppercase mb-2">Ditolak</p>
+                <p class="text-3xl font-black text-rose-500">12</p>
+                <div class="mt-2 text-[11px] text-rose-400 font-medium italic">Butuh tindak lanjut</div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-3xl shadow-sm border border-slate-200">
+            <div class="p-6 border-b border-slate-50 flex justify-between items-center bg-slate-50/50 rounded-t-3xl">
+                <h3 class="font-bold text-slate-700">Antrean Verifikasi Dokumen</h3>
+                <div class="flex gap-2">
+                    <input type="text" placeholder="Cari NIDN..." class="text-xs px-4 py-2 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+                    <button class="bg-slate-800 text-white px-4 py-2 rounded-xl text-xs font-bold">Filter</button>
                 </div>
             </div>
-            <p class="mt-4 text-gray-600 text-sm">80% dosen telah mengajukan dokumen bulan ini (##)</p>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="text-[10px] text-slate-400 uppercase tracking-widest border-b border-slate-50">
+                            <th class="px-8 py-5">Nama Dosen</th>
+                            <th class="px-8 py-5">Jenis Dokumen</th>
+                            <th class="px-8 py-5">File</th>
+                            <th class="px-8 py-5 text-center">Status</th>
+                            <th class="px-8 py-5 text-right">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-50">
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="px-8 py-5">
+                                <div class="font-bold text-slate-700">Dr. Ir. Heru Prasetyo</div>
+                                <div class="text-[11px] text-slate-400">Teknik Elektro | NIDN: 041122xxx</div>
+                            </td>
+                            <td class="px-8 py-5 text-sm text-slate-600">Jurnal Internasional Q1</td>
+                            <td class="px-8 py-5">
+                                <a href="#" class="text-blue-500 hover:text-blue-700 flex items-center gap-1 text-xs font-bold">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                    Review_PDF
+                                </a>
+                            </td>
+                            <td class="px-8 py-5">
+                                <div class="flex justify-center">
+                                    <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-[10px] font-black uppercase italic">Pending</span>
+                                </div>
+                            </td>
+                            <td class="px-8 py-5 text-right">
+                                <div class="flex justify-end gap-2">
+                                    <button class="bg-green-100 text-green-700 p-2 rounded-lg hover:bg-green-200 transition" title="Approve">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+                                    </button>
+                                    <button class="bg-rose-100 text-rose-700 p-2 rounded-lg hover:bg-rose-200 transition" title="Reject">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-
     </main>
     <script>
         const sidebar = document.getElementById('sidebar');
