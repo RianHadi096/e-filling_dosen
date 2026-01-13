@@ -21,6 +21,7 @@ Route::post('/admin/logout', [LoginController::class, 'logout'])->name('/admin/l
 //DOSEN
 Route::get('/dosen/dashboard', [DosenController::class, 'dashboard'])->name('dosen/dashboard');
 Route::get('/dosen/histori_e-filling', [DosenController::class, 'historiEfilling'])->name('dosen/histori_e-filling');
+Route::get('/dosen/upload_file', [DosenController::class, 'uploadFile'])->name('dosen/upload_file');
 Route::get('/dosen/login', [LoginController::class, 'dosenLogin'])->name('/dosen/login');
 Route::post('/dosen/login/authenticate', [LoginController::class, 'authenticateDosen'])->name('/dosen/login/authenticate');
 Route::post('/dosen/logout', [LoginController::class, 'logout'])->name('/dosen/logout');

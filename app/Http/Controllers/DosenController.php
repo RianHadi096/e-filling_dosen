@@ -6,12 +6,13 @@ use Illuminate\Http\Request;
 
 class DosenController extends Controller
 {
-    public function dashboard()
-    {
+    public function dashboard(){
         return view('dosen.dashboard_dosen');
     }
-    public function historiEfilling()
-    {
+    public function historiEfilling(){
         return view('dosen.histori_e-filling');
+    }
+    public function uploadFile(){
+        return view('dosen.upload_file');
     }
 }

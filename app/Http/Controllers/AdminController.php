@@ -6,12 +6,10 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function dashboard()
-    {
+    public function dashboard(){
         return view('admin.dashboard_admin');
     }
-    public function historiEfillingDosen()
-    {
+    public function historiEfillingDosen(){
         return view('admin.histori_e-filling_dosen');
     }
 }
