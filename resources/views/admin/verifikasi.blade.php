@@ -84,8 +84,11 @@
             </a>
             
         </nav>
-
         <div class="px-4 border-t pt-4">
+            <a href="{{ route('admin/user_management') }}" class="flex items-center gap-3 p-3 rounded-xl bg-blue-600 text-white font-semibold shadow-lg shadow-blue-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                <span class="text-sm font-semibold text-white">Kelola Pengguna</span>
+            </a>
             <a href="#" class="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-100 transition group">
                 <div class="p-1 border rounded-full bg-white text-gray-700">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -102,7 +105,7 @@
         <header class="mb-8 flex justify-between items-end">
             <div>
                 <h1 class="text-2xl font-bold text-slate-800">Antrean Verifikasi</h1>
-                <p class="text-slate-500 text-sm">Terdapat <span class="font-bold text-blue-600">8 dokumen</span> yang perlu Anda tinjau hari ini.</p>
+                <p class="text-slate-500 text-sm">Terdapat <span class="font-bold text-blue-600">24 dokumen</span> yang perlu Anda tinjau hari ini.</p>
             </div>
             
             <div class="flex gap-2">
@@ -182,7 +185,7 @@
         </div>
 
         <div class="mt-6 flex justify-between items-center text-sm text-slate-500 font-medium px-2">
-            <div>Menampilkan 1-8 dari 24 Antrean</div>
+            <div>Menampilkan 1-2 dari 24 Antrean</div>
             <div class="flex gap-2">
                 <button class="px-4 py-2 border rounded-lg bg-white hover:bg-gray-50 transition">Sebelumnya</button>
                 <button class="px-4 py-2 border rounded-lg bg-white hover:bg-gray-50 transition">Selanjutnya</button>

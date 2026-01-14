@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dasbor E-Filling Dosen (Admin)</title>
+    <title>Dasbor E-Filling Dosen | Admin E-Filling</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -82,8 +82,11 @@
             </a>
             
         </nav>
-
         <div class="px-4 border-t pt-4">
+            <a href="{{ route('admin/user_management') }}" class="flex items-center gap-3 p-3 rounded-xl bg-blue-600 text-white font-semibold shadow-lg shadow-blue-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                <span class="text-sm font-semibold text-white">Kelola Pengguna</span>
+            </a>
             <a href="#" class="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-100 transition group">
                 <div class="p-1 border rounded-full bg-white text-gray-700">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -108,7 +111,7 @@
             <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
                 <p class="text-slate-400 text-xs font-bold uppercase mb-2">Total Submisi</p>
                 <p class="text-3xl font-black text-slate-800">1,240</p>
-                <div class="mt-2 text-[11px] text-green-500 font-bold">##</div>
+                <div class="mt-2 text-[11px] text-green-500 font-bold"></div>
             </div>
             <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
                 <p class="text-slate-400 text-xs font-bold uppercase mb-2">Perlu Review</p>
@@ -118,7 +121,7 @@
             <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
                 <p class="text-slate-400 text-xs font-bold uppercase mb-2">Dosen Aktif</p>
                 <p class="text-3xl font-black text-slate-800">412</p>
-                <div class="mt-2 text-[11px] text-blue-500 font-medium">##</div>
+                <div class="mt-2 text-[11px] text-blue-500 font-medium"></div>
             </div>
             <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
                 <p class="text-slate-400 text-xs font-bold uppercase mb-2">Ditolak</p>

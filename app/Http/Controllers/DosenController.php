@@ -15,4 +15,7 @@ class DosenController extends Controller
     public function uploadFile(){
         return view('dosen.upload_file');
     }
+    public function profile(){
+        return view('dosen.profil_dosen');
+    }
 }

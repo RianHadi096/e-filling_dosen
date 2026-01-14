@@ -18,4 +18,7 @@ class AdminController extends Controller
     public function userManagement(){
         return view('admin.user_management');
     }
+    public function profile(){
+        return view('admin.profil_admin');
+    }
 }

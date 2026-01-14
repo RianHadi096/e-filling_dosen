@@ -19,6 +19,7 @@ Route::post('/admin/login/authenticate', [LoginController::class, 'authenticateA
 Route::post('/admin/logout', [LoginController::class, 'logout'])->name('/admin/logout');
 
 Route::get('/admin/user_management', [AdminController::class, 'userManagement'])->name('admin/user_management');
+Route::get('/admin/profil', [AdminController::class, 'profile'])->name('admin/profil');
 
 //DOSEN
 Route::get('/dosen/dashboard', [DosenController::class, 'dashboard'])->name('dosen/dashboard');
@@ -27,3 +28,5 @@ Route::get('/dosen/upload_file', [DosenController::class, 'uploadFile'])->name('
 Route::get('/dosen/login', [LoginController::class, 'dosenLogin'])->name('/dosen/login');
 Route::post('/dosen/login/authenticate', [LoginController::class, 'authenticateDosen'])->name('/dosen/login/authenticate');
 Route::post('/dosen/logout', [LoginController::class, 'logout'])->name('/dosen/logout');
+
+Route::get('/dosen/profil', [DosenController::class, 'profile'])->name('dosen/profil');
