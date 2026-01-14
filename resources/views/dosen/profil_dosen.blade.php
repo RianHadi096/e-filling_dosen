@@ -98,7 +98,6 @@
     <main class="flex-1 p-10 overflow-y-auto">
         <header class="mb-8">
             <h1 class="text-2xl font-bold text-gray-800">Profil Akademik</h1>
-            <p class="text-gray-500 text-sm">Informasi ini akan muncul pada setiap dokumen yang Anda unggah.</p>
         </header>
 
         <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">

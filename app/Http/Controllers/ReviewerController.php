@@ -18,4 +18,5 @@ class ReviewerController extends Controller
     public function reviewDokumen(){
         return view('reviewer.review_dokumen');
     }
+
 }

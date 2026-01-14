@@ -164,10 +164,10 @@
                         </td>
                         <td class="px-6 py-4 text-right">
                             <div class="flex justify-end gap-3">
-                                <button class="text-gray-400 hover:text-blue-600 transition" title="Ubah Peran">
+                                <button onclick="openRoleModal('Budi Santoso, M.T.','Dosen Tetap')" class="text-gray-400 hover:text-blue-600 transition" title="Ubah Peran">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
                                 </button>
-                                <button class="text-gray-400 hover:text-red-600 transition" title="Suspend Akun">
+                                <button onclick="openSuspendModal('Budi Santoso, M.T.')" class="text-gray-400 hover:text-red-600 transition" title="Suspend Akun">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
                                 </button>
                             </div>
@@ -193,10 +193,10 @@
                         </td>
                         <td class="px-6 py-4 text-right">
                             <div class="flex justify-end gap-3">
-                                <button class="text-gray-400 hover:text-blue-600 transition" title="Ubah Peran">
+                                <button onclick="openRoleModal('Siti Aminah, M.Kom.','Admin Fakultas')" class="text-gray-400 hover:text-blue-600 transition" title="Ubah Peran">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
                                 </button>
-                                <button class="text-gray-400 hover:text-red-600 transition" title="Suspend Akun">
+                                <button onclick="openSuspendModal('Siti Aminah, M.Kom.')" class="text-gray-400 hover:text-red-600 transition" title="Suspend Akun">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
                                 </button>
                             </div>
@@ -222,10 +222,10 @@
                         </td>
                         <td class="px-6 py-4 text-right">
                             <div class="flex justify-end gap-3">
-                                <button class="text-gray-400 hover:text-blue-600 transition" title="Ubah Peran">
+                                <button onclick="openRoleModal('Kurniawan, S.T','Admin E-Filling')" class="text-gray-400 hover:text-blue-600 transition" title="Ubah Peran">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
                                 </button>
-                                <button class="text-gray-400 hover:text-red-600 transition" title="Suspend Akun">
+                                <button onclick="openSuspendModal('Kurniawan, S.T')" class="text-gray-400 hover:text-red-600 transition" title="Suspend Akun">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
                                 </button>
                             </div>
@@ -251,10 +251,10 @@
                         </td>
                         <td class="px-6 py-4 text-right">
                             <div class="flex justify-end gap-3">
-                                <button class="text-gray-400 hover:text-blue-600 transition" title="Ubah Peran">
+                                <button onclick="openRoleModal('Rina Agustina, S.Si','Reviewer')" class="text-gray-400 hover:text-blue-600 transition" title="Ubah Peran">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
                                 </button>
-                                <button class="text-gray-400 hover:text-red-600 transition" title="Suspend Akun">
+                                <button onclick="openSuspendModal('Rina Agustina, S.Si')" class="text-gray-400 hover:text-red-600 transition" title="Suspend Akun">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
                                 </button>
                             </div>
@@ -325,6 +325,51 @@
         </div>
     </div>
 
+    <div id="roleModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeRoleModal()"></div>
+        <div class="flex min-h-full items-center justify-center p-4">
+            <div class="relative bg-white w-full max-w-md rounded-4xl shadow-2xl p-8 animate-in zoom-in duration-200">
+                <h3 class="text-xl font-bold text-slate-800 mb-2">Ubah Peran Pengguna</h3>
+                <p class="text-sm text-slate-500 mb-6">Mengubah peran <span id="roleTargetName" class="font-bold text-slate-700"></span> akan menyesuaikan hak akses dashboard mereka.</p>
+                
+                <form action="#" method="POST" class="space-y-4">
+                    <div>
+                        <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Pilih Peran Baru</label>
+                        <select class="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition font-medium text-slate-700">
+                            <option>Dosen Tetap</option>
+                            <option>Dosen LB</option>
+                            <option>Admin Fakultas</option>
+                            <option>Admin Universitas</option>
+                            <option>Admin E-Filling</option>
+                        </select>
+                    </div>
+                    <div class="pt-4 flex gap-3">
+                        <button type="button" onclick="closeRoleModal()" class="flex-1 py-3 text-sm font-bold text-slate-400 hover:bg-gray-50 rounded-2xl transition">Batal</button>
+                        <button type="submit" class="flex-1 py-3 bg-blue-600 text-white rounded-2xl text-sm font-bold shadow-lg shadow-blue-100 hover:bg-blue-700 transition">Simpan Perubahan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="suspendModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeSuspendModal()"></div>
+        <div class="flex min-h-full items-center justify-center p-4">
+            <div class="relative bg-white w-full max-w-md rounded-4xl shadow-2xl p-8 text-center animate-in zoom-in duration-200 border-t-8 border-rose-500">
+                <div class="w-16 h-16 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 mb-2">Suspend Akun?</h3>
+                <p class="text-sm text-slate-500 mb-8">Anda akan menangguhkan akses untuk <span id="suspendTargetName" class="font-bold text-slate-800"></span>. Pengguna ini tidak akan bisa login sampai status dikembalikan.</p>
+                
+                <div class="flex flex-col gap-2">
+                    <button type="submit" class="w-full py-3 bg-rose-600 text-white rounded-2xl text-sm font-bold shadow-lg shadow-rose-100 hover:bg-rose-700 transition">Ya, Suspend Pengguna</button>
+                    <button type="button" onclick="closeSuspendModal()" class="w-full py-3 text-sm font-bold text-slate-400 hover:bg-gray-50 rounded-2xl transition">Batalkan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         const sidebar = document.getElementById('sidebar');
         let sidebarVisible = true;
@@ -349,6 +394,27 @@
             }
         }
 
+        function openRoleModal(name, currentRole) {
+            document.getElementById('roleTargetName').innerText = name;
+            document.getElementById('roleModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeRoleModal() {
+            document.getElementById('roleModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function openSuspendModal(name) {
+            document.getElementById('suspendTargetName').innerText = name;
+            document.getElementById('suspendModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSuspendModal() {
+            document.getElementById('suspendModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
 
         // Hide span from aside with cursor if cursor outside aside (Desktop Only)
         document.addEventListener('mousemove', (e) => {

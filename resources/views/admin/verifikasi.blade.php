@@ -206,8 +206,8 @@
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                         </div>
                         <div>
-                            <h3 class="text-lg font-bold text-slate-800 leading-tight">Jurnal_AI_Optimation.pdf</h3>
-                            <p class="text-xs text-slate-500 font-medium">Pengirim: Dr. Ir. Heru Prasetyo • <span class="text-blue-600 uppercase font-bold tracking-tighter">Penelitian</span></p>
+                            <h3 class="text-lg font-bold text-slate-800 leading-tight">Optimasi CNN pada Klasifikasi Gambar.pdf</h3>
+                            <p class="text-xs text-slate-500 font-medium">Pengirim: Dr. Ahmad Faisal • <span class="text-blue-600 uppercase font-bold tracking-tighter">Penelitian</span></p>
                         </div>
                     </div>
                     <div class="flex items-center gap-3">

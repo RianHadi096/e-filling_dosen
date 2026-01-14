@@ -12,6 +12,9 @@ class LoginController extends Controller
     public function adminLogin(){
         return view('admin.login_admin');
     }
+    public function reviewerLogin(){
+        return view('reviewer.login_reviewer');
+    }
 
     public function authenticate(Request $request){
         // Authentication logic here
