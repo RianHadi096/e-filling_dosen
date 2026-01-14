@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Review Dokumen | E-Filling</title>
+    <title>Daftar Peninjauan Dokumen | E-Filling</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -145,7 +145,7 @@
             </div>
         </header>
 
-        <div class="bg-white rounded-[32px] border border-gray-200 shadow-sm overflow-hidden">
+        <div class="bg-white rounded-4xl border border-gray-200 shadow-sm overflow-hidden">
             <table class="w-full text-left">
                 <thead class="bg-slate-50 border-b border-gray-100">
                     <tr class="text-[10px] font-extrabold text-slate-400 uppercase tracking-[0.2em]">
@@ -170,7 +170,7 @@
                         <td class="px-8 py-6">
                             <div class="max-w-xs">
                                 <p class="text-sm font-semibold text-slate-700 truncate" title="Analisis Keamanan Jaringan IoT Berbasis Protokol MQTT">Analisis Keamanan Jaringan IoT Berbasis Protokol MQTT</p>
-                                <button onclick= class="text-[10px] font-bold text-blue-600 mt-1 flex items-center gap-1 hover:underline">
+                                <button onclick="openPreviewPDFModal('Analisis Keamanan Jaringan IoT Berbasis Protokol MQTT', 'Penelitian', '14 Jan 2026')" class="text-[10px] font-bold text-blue-600 mt-1 flex items-center gap-1 hover:underline">
                                     <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
                                     Pratinjau PDF
                                 </button>
@@ -203,7 +203,7 @@
                         <td class="px-8 py-6">
                             <div class="max-w-xs">
                                 <p class="text-sm font-semibold text-slate-700 truncate">Modul Praktikum Pemrograman Web</p>
-                                <button class="text-[10px] font-bold text-blue-600 mt-1 flex items-center gap-1 hover:underline">
+                                <button onclick="openPreviewPDFModal('Modul Praktikum Pemrograman Web', 'Pendidikan', '12 Jan 2026')" class="text-[10px] font-bold text-blue-600 mt-1 flex items-center gap-1 hover:underline">
                                     <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
                                     Pratinjau PDF
                                 </button>
@@ -246,7 +246,7 @@
         <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeReviewModal()"></div>
 
         <div class="flex min-h-full items-center justify-center p-4">
-            <div class="relative bg-white w-full max-w-3xl rounded-[32px] shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
+            <div class="relative bg-white w-full max-w-3xl rounded-4xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
                 
                 <div class="px-8 py-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
                     <div>
@@ -318,6 +318,45 @@
         </div>
     </div>
 
+    <!-- Review PDF Modal -->
+    <div id="previewModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity"></div>
+
+        <div class="flex min-h-full items-center justify-center p-4">
+            <div class="relative w-full max-w-5xl rounded-3xl bg-white shadow-2xl transition-all overflow-hidden">
+                
+                <div class="flex items-center justify-between border-b border-gray-100 px-8 py-5 bg-gray-50/50">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800" id="modalTitle">Pratinjau Dokumen</h3>
+                        <p class="text-xs text-slate-500" id="modalSubTitle">Kategori: Publikasi • Diunggah 12 Jan 2026</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button class="flex items-center gap-2 bg-white border border-gray-200 text-slate-600 px-4 py-2 rounded-xl text-xs font-bold hover:bg-gray-50 transition shadow-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            Unduh PDF
+                        </button>
+                        <button onclick="closePreviewPDFModal()" class="text-slate-400 hover:text-slate-600 p-2 rounded-full hover:bg-gray-100 transition">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-slate-100 p-4 min-h-[600px] flex items-center justify-center">
+                    <div id="fileContainer" class="w-full h-[600px] bg-white rounded-xl shadow-inner border border-gray-200 flex items-center justify-center overflow-hidden">
+                        <div class="text-center">
+                            <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <p class="text-gray-400 font-medium">Memuat pratinjau dokumen...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-8 py-4 border-t border-gray-100 flex justify-end bg-white">
+                    <button onclick="closePreviewPDFModal()" class="px-6 py-2 bg-slate-800 text-white rounded-xl text-sm font-bold hover:bg-slate-900 transition">Tutup Pratinjau</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
 
         const sidebar = document.getElementById('sidebar');
@@ -332,6 +371,19 @@
 
         function closeReviewModal() {
             document.getElementById('reviewModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        //modal preview file
+        function openPreviewPDFModal(title, category, date) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalSubTitle').innerText = `Kategori: ${category.toUpperCase()} • Diunggah pada ${date}`;
+            document.getElementById('previewModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePreviewPDFModal() {
+            document.getElementById('previewModal').classList.add('hidden');
             document.body.style.overflow = 'auto';
         }
 

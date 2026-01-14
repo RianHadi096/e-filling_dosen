@@ -176,7 +176,7 @@
         <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeDetailModal()"></div>
 
         <div class="flex min-h-full items-center justify-center p-4">
-            <div class="relative bg-white w-full max-w-4xl rounded-[32px] shadow-2xl overflow-hidden flex flex-col md:flex-row">
+            <div class="relative bg-white w-full max-w-4xl rounded-4xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
                 
                 <div class="flex-1 p-8 md:p-10 overflow-y-auto max-h-[85vh]">
                     <div class="mb-8">

@@ -266,7 +266,7 @@
     </main>
 
     <!-- Modal -->
-    <div id="userModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div id="userModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
     
         <div class="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden transform transition-all">
             <div class="px-8 py-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">

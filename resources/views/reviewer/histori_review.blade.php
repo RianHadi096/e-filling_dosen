@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riwayat Review | E-Filling</title>
+    <title>Riwayat Peninjauan Dokumen  | E-Filling</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -164,7 +164,7 @@
             </div>
         </div>
 
-        <div class="bg-white rounded-[24px] border border-gray-200 shadow-sm overflow-hidden">
+        <div class="bg-white rounded-3xl border border-gray-200 shadow-sm overflow-hidden">
             <table class="w-full text-left">
                 <thead class="bg-gray-50 border-b border-gray-100">
                     <tr class="text-[11px] font-extrabold text-slate-400 uppercase tracking-widest">
@@ -242,7 +242,7 @@
         <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeHistoryDetailModal()"></div>
 
         <div class="flex min-h-full items-center justify-center p-4">
-            <div class="relative bg-white w-full max-w-xl rounded-[32px] shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
+            <div class="relative bg-white w-full max-w-xl rounded-4xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
                 
                 <div class="px-8 py-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
                     <div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dasbor Reviewer | E-Filling</title>
+    <title>Dasbor Peninjauan Dokumen | E-Filling</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -125,28 +125,28 @@
         </header>
 
         <div class="grid grid-cols-4 gap-6 mb-10">
-            <div class="bg-white p-6 rounded-[24px] border border-gray-100 shadow-sm">
+            <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
                 <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 </div>
                 <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Antrean</p>
                 <p class="text-2xl font-bold text-slate-800">12</p>
             </div>
-            <div class="bg-white p-6 rounded-[24px] border border-gray-100 shadow-sm">
+            <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
                 <div class="w-10 h-10 bg-green-50 text-green-600 rounded-xl flex items-center justify-center mb-4">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 </div>
                 <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Selesai</p>
                 <p class="text-2xl font-bold text-slate-800">148</p>
             </div>
-            <div class="bg-white p-6 rounded-[24px] border border-gray-100 shadow-sm">
+            <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
                 <div class="w-10 h-10 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center mb-4">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
                 </div>
                 <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Butuh Revisi</p>
                 <p class="text-2xl font-bold text-slate-800">3</p>
             </div>
-            <div class="bg-blue-600 p-6 rounded-[24px] shadow-lg shadow-blue-100">
+            <div class="bg-blue-600 p-6 rounded-3xl shadow-lg shadow-blue-100">
                 <div class="w-10 h-10 bg-white/20 text-white rounded-xl flex items-center justify-center mb-4 border border-white/30">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                 </div>
@@ -155,7 +155,7 @@
             </div>
         </div>
 
-        <div class="bg-white rounded-[32px] border border-gray-100 shadow-sm overflow-hidden">
+        <div class="bg-white rounded-4xl border border-gray-100 shadow-sm overflow-hidden">
             <div class="p-8 border-b border-gray-50 flex justify-between items-center">
                 <h3 class="text-lg font-bold text-slate-800">Antrean Tinjauan Terbaru</h3>
                 <div class="flex gap-2">
@@ -221,7 +221,7 @@
         <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeReviewModal()"></div>
 
         <div class="flex min-h-full items-center justify-center p-4">
-            <div class="relative bg-white w-full max-w-2xl rounded-[32px] shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
+            <div class="relative bg-white w-full max-w-2xl rounded-4xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
                 
                 <div class="px-8 py-6 border-b border-gray-100 flex justify-between items-center">
                     <div>

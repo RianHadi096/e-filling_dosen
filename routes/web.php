@@ -10,6 +10,9 @@ use App\Http\Controllers\ReviewerController;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
+Route::get('/', function () {
+    return view('welcome_efilling');
+});
 
 //ADMIN
 Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin/dashboard');

@@ -235,7 +235,7 @@
     </div>
 
      <!--modal reupload file-->
-    <div id="reuploadModal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-4">
+    <div id="reuploadModal" class="fixed inset-0 z-60 flex items-center justify-center p-4">
         <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeReuploadModal()"></div>
 
         <div class="relative bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
@@ -247,7 +247,7 @@
             <form enctype="multipart/form-data" class="p-8">
                 <div class="mb-6 bg-red-50 border-l-4 border-red-500 p-4 rounded-r-xl">
                     <div class="flex gap-3">
-                        <svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        <svg class="w-5 h-5 text-red-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
                         <div>
                             <p class="text-xs font-bold text-red-700 uppercase">Catatan Admin:</p>
                             <p class="text-xs text-red-600 italic">"Mohon lampirkan sisi belakang sertifikat juga agar nomor seri terlihat jelas."</p>

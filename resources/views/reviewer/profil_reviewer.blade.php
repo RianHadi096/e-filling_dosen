@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Reviewer | E-Filling</title>
+    <title>Profil Peninjauan Dokumen | E-Filling</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -126,7 +126,7 @@
         <div class="max-w-6xl mx-auto grid grid-cols-12 gap-8">
             
             <div class="col-span-12 lg:col-span-4 space-y-6">
-                <div class="bg-white rounded-[32px] border border-gray-100 shadow-sm p-8 text-center">
+                <div class="bg-white rounded-4xl border border-gray-100 shadow-sm p-8 text-center">
                     <div class="relative inline-block mb-6">
                         <img src="https://ui-avatars.com/api/?name=Prof+Sumitro&background=0D8ABC&color=fff&size=128" 
                              class="w-32 h-32 rounded-full border-4 border-blue-50 shadow-md object-cover" alt="Reviewer">
@@ -147,7 +147,7 @@
                     </div>
                 </div>
 
-                <div class="bg-slate-900 rounded-[32px] p-8 text-white shadow-xl">
+                <div class="bg-slate-900 rounded-4xl p-8 text-white shadow-xl">
                     <h4 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 italic">Bidang Kepakaran</h4>
                     <div class="flex flex-wrap gap-2">
                         <span class="bg-white/10 px-3 py-1 rounded-lg text-[10px] font-bold border border-white/20">Cyber Security</span>
@@ -159,7 +159,7 @@
 
             <div class="col-span-12 lg:col-span-8 space-y-6">
                 
-                <div class="bg-white rounded-[32px] border border-gray-100 shadow-sm p-8">
+                <div class="bg-white rounded-4xl border border-gray-100 shadow-sm p-8">
                     <h3 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
                         <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
                         Informasi Identitas
@@ -183,7 +183,7 @@
                     </form>
                 </div>
 
-                <div class="bg-white rounded-[32px] border border-gray-100 shadow-sm p-8">
+                <div class="bg-white rounded-4xl border border-gray-100 shadow-sm p-8">
                     <h3 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
                         <svg class="w-5 h-5 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
                         Autentikasi & Keamanan
