@@ -80,7 +80,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                     </svg>
                 </div>
-                <span class="text-sm font-semibold text-gray-800">Dashboard</span>
+                <span class="text-sm font-semibold text-gray-800">Dasbor</span>
             </a>
 
             <a href="{{ route('admin/histori_e-filling_dosen') }}" class="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-100 transition group">
@@ -107,7 +107,7 @@
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                 <span class="text-sm font-semibold text-white">Kelola Pengguna</span>
             </a>
-            <a href="#" class="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-100 transition group">
+            <a href="{{ route('admin/profil') }}" class="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-100 transition group">
                 <div class="p-1 border rounded-full bg-white text-gray-700">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -147,13 +147,13 @@
                     <tbody class="bg-white divide-y divide-gray-200">
                         <tr>
                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                Dr. John Doe
+                                Dr. Ahmad Faisal, M.Kom
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Januari
+                                Oktober
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                2023
+                                2025
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm">
                                 <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
@@ -161,7 +161,7 @@
                                 </span>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600 hover:underline cursor-pointer">
-                                Lihat Detail
+                                <button onclick="openDetailModal()">Lihat Detail</button>
                             </td>
                         </tr>
                     </tbody>
@@ -170,11 +170,115 @@
         </div>
        
     </main>
+
+
+    <div id="detailModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeDetailModal()"></div>
+
+        <div class="flex min-h-full items-center justify-center p-4">
+            <div class="relative bg-white w-full max-w-4xl rounded-[32px] shadow-2xl overflow-hidden flex flex-col md:flex-row">
+                
+                <div class="flex-1 p-8 md:p-10 overflow-y-auto max-h-[85vh]">
+                    <div class="mb-8">
+                        <span class="text-[10px] font-extrabold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Detail Arsip E-Filling</span>
+                        <h2 class="text-2xl font-bold text-slate-800 mt-3" id="detJudul">Analisis Keamanan Jaringan IoT</h2>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-y-6 gap-x-8">
+                        <div class="col-span-2 bg-gray-50 p-5 rounded-2xl flex items-center gap-4 border border-gray-100">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm">
+                                <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 font-bold uppercase">Dosen Pengirim</p>
+                                <p class="text-sm font-bold text-slate-700">Dr. Ahmad Faisal, M.Kom</p>
+                                <p class="text-[11px] text-gray-500 italic">NIDN: 041208xxxx • Prodi Teknik Informatika</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-[11px] text-gray-400 font-bold uppercase mb-1">Kategori Tridarma</p>
+                            <p class="text-sm font-semibold text-slate-700">Penelitian (Jurnal Internasional)</p>
+                        </div>
+                        <div>
+                            <p class="text-[11px] text-gray-400 font-bold uppercase mb-1">Tanggal Terbit</p>
+                            <p class="text-sm font-semibold text-slate-700">12 Oktober 2025</p>
+                        </div>
+                        <div class="col-span-2">
+                            <p class="text-[11px] text-gray-400 font-bold uppercase mb-1">Keterangan Tambahan</p>
+                            <p class="text-sm text-slate-600 leading-relaxed">Penelitian ini didanai oleh Hibah Internal Universitas tahun anggaran 2025/2026. Fokus pada optimasi keamanan layer transport.</p>
+                        </div>
+
+                        <div class="col-span-2">
+                            <p class="text-[11px] text-gray-400 font-bold uppercase mb-3">Lampiran Berkas</p>
+                            <div class="flex items-center justify-between p-4 border border-blue-100 rounded-2xl bg-blue-50/30 group hover:bg-blue-50 transition cursor-pointer">
+                                <div class="flex items-center gap-3">
+                                    <div class="p-2 bg-white rounded-lg text-red-500 shadow-sm">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 012-2h4.586A1 1 0 0111 2.414l4.586 4.586V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"></path></svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-700">jurnal_publikasi_final.pdf</p>
+                                        <p class="text-[10px] text-gray-400 uppercase">Berkas PDF • 2.4 MB</p>
+                                    </div>
+                                </div>
+                                <button class="text-blue-600 font-bold text-xs group-hover:underline">Buka Berkas</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-[320px] bg-slate-50 border-l border-gray-100 p-8 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Alur Verifikasi</h4>
+                        
+                        <div class="space-y-6 relative before:absolute before:inset-0 before:left-2 before:border-l-2 before:border-dashed before:border-gray-200">
+                            <div class="relative pl-8">
+                                <div class="absolute left-0 top-1 w-4 h-4 rounded-full bg-green-500 border-4 border-white shadow-sm"></div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase">Diupload</p>
+                                <p class="text-xs font-bold text-slate-700">12 Jan 2026</p>
+                            </div>
+                            <div class="relative pl-8">
+                                <div class="absolute left-0 top-1 w-4 h-4 rounded-full bg-blue-500 border-4 border-white shadow-sm"></div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase">Review Selesai</p>
+                                <p class="text-xs font-bold text-slate-700">13 Jan 2026</p>
+                                <div class="mt-2 bg-blue-100 text-blue-700 p-3 rounded-xl">
+                                    <p class="text-[10px] font-bold uppercase italic opacity-70">Hasil KUM:</p>
+                                    <p class="text-lg font-black italic">40.00</p>
+                                    <p class="text-[10px] mt-1 leading-tight">"Substansi sesuai, data valid."</p>
+                                </div>
+                            </div>
+                            <div class="relative pl-8">
+                                <div class="absolute left-0 top-1 w-4 h-4 rounded-full bg-gray-300 border-4 border-white shadow-sm"></div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase">Finalisasi Admin</p>
+                                <p class="text-xs font-medium text-gray-400 italic">Menunggu konfirmasi Anda...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 space-y-3">
+                        <button class="w-full py-3 bg-slate-800 text-white rounded-xl text-sm font-bold shadow-lg shadow-slate-200 hover:bg-slate-900 transition">Konfirmasi Final</button>
+                        <button onclick="closeDetailModal()" class="w-full py-3 bg-white text-slate-400 rounded-xl text-sm font-bold border border-gray-100 hover:bg-gray-50 transition">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         const sidebar = document.getElementById('sidebar');
         let sidebarVisible = true;
         let isIconOnly = false;
 
+        //modal detail
+        function openDetailModal(judul) {
+            document.getElementById('detJudul').innerText = judul;
+            document.getElementById('detailModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeDetailModal() {
+            document.getElementById('detailModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
 
         // Hide span from aside with cursor if cursor outside aside (Desktop Only)
         document.addEventListener('mousemove', (e) => {

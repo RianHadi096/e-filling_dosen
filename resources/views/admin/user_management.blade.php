@@ -60,7 +60,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                     </svg>
                 </div>
-                <span class="text-sm font-semibold text-gray-800">Dashboard</span>
+                <span class="text-sm font-semibold text-gray-800">Dasbor</span>
             </a>
 
             <a href="{{ route('admin/histori_e-filling_dosen') }}" class="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-100 transition group">
@@ -214,6 +214,35 @@
                         </td>
                         <td class="px-6 py-4">
                             <span class="px-3 py-1 rounded-lg bg-cyan-50 text-cyan-600 text-[10px] font-bold uppercase">Admin E-Filling</span>
+                        </td>
+                        <td class="px-6 py-4 text-center">
+                            <span class="text-green-500 font-bold text-[10px] flex items-center justify-center gap-1">
+                                <span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span> AKTIF
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="flex justify-end gap-3">
+                                <button class="text-gray-400 hover:text-blue-600 transition" title="Ubah Peran">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                                </button>
+                                <button class="text-gray-400 hover:text-red-600 transition" title="Suspend Akun">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50/50 transition">
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-xs">RA</div>
+                                <div>
+                                    <div class="font-bold text-slate-700 text-sm">Rina Agustina, S.Si</div>
+                                    <div class="text-[11px] text-slate-400 italic font-mono">rina.agustina@univ.ac.id</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <span class="px-3 py-1 rounded-lg bg-cyan-50 text-cyan-600 text-[10px] font-bold uppercase">Reviewer</span>
                         </td>
                         <td class="px-6 py-4 text-center">
                             <span class="text-green-500 font-bold text-[10px] flex items-center justify-center gap-1">

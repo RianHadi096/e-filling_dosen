@@ -80,7 +80,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                     </svg>
                 </div>
-                <span class="text-sm font-semibold text-gray-800">Dashboard</span>
+                <span class="text-sm font-semibold text-gray-800">Dasbor</span>
             </a>
 
             <a href="{{ route('dosen/histori_e-filling') }}" class="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-100 transition group">
@@ -175,7 +175,7 @@
                         <th class="px-6 py-4">Nama Dokumen</th>
                         <th class="px-6 py-4">Kategori</th>
                         <th class="px-6 py-4 text-center">Status</th>
-                        <th class="px-6 py-4 text-right">Aksi</th>
+                        <th class="px-8 py-4 text-center">Aksi</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-50">
@@ -187,12 +187,15 @@
                         <td class="px-6 py-4 text-sm text-gray-600">Sertifikasi</td>
                         <td class="px-6 py-4">
                             <div class="flex justify-center">
-                                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-tighter">Verified</span>
+                                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-tighter">Telah Verifikasi</span>
                             </div>
                         </td>
-                        <td class="px-6 py-4 text-right">
-                            <button class="text-gray-400 hover:text-blue-600 transition">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                        <td class="px-6 py-4 text-center">
+                            <button onclick="openPreviewModal('Sertifikat Oracle Java Professional', 'Sertifikasi', '12 Jan 2026')" class="text-blue-600 font-medium hover:underline text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                                    <path d="M10 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                                    <path fill-rule="evenodd" d="M.664 10.59a1.651 1.651 0 0 1 0-1.186A10.004 10.004 0 0 1 10 3c4.257 0 7.893 2.66 9.336 6.41.147.381.146.804 0 1.186A10.004 10.004 0 0 1 10 17c-4.257 0-7.893-2.66-9.336-6.41ZM14 10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" clip-rule="evenodd" />
+                                </svg>
                             </button>
                         </td>
                     </tr>
@@ -200,12 +203,102 @@
             </table>
         </div>
     </main>
-    
+
+    <!--modal lihat file-->
+    <div id="previewModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity"></div>
+
+        <div class="flex min-h-full items-center justify-center p-4">
+            <div class="relative w-full max-w-5xl rounded-3xl bg-white shadow-2xl transition-all overflow-hidden">
+                
+                <div class="flex items-center justify-between border-b border-gray-100 px-8 py-5 bg-gray-50/50">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800" id="modalTitle">Pratinjau Dokumen</h3>
+                        <p class="text-xs text-slate-500" id="modalSubTitle">Kategori: Publikasi • Diunggah 12 Jan 2026</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button class="flex items-center gap-2 bg-white border border-gray-200 text-slate-600 px-4 py-2 rounded-xl text-xs font-bold hover:bg-gray-50 transition shadow-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            Unduh PDF
+                        </button>
+                        <button onclick="closePreviewModal()" class="text-slate-400 hover:text-slate-600 p-2 rounded-full hover:bg-gray-100 transition">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-slate-100 p-4 min-h-[600px] flex items-center justify-center">
+                    <div id="fileContainer" class="w-full h-[600px] bg-white rounded-xl shadow-inner border border-gray-200 flex items-center justify-center overflow-hidden">
+                        <div class="text-center">
+                            <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <p class="text-gray-400 font-medium">Memuat pratinjau dokumen...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-8 py-4 border-t border-gray-100 flex justify-end bg-white">
+                    <button onclick="closePreviewModal()" class="px-6 py-2 bg-slate-800 text-white rounded-xl text-sm font-bold hover:bg-slate-900 transition">Tutup Pratinjau</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--modal lihat file-->
+    <div id="previewModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity"></div>
+
+        <div class="flex min-h-full items-center justify-center p-4">
+            <div class="relative w-full max-w-5xl rounded-3xl bg-white shadow-2xl transition-all overflow-hidden">
+                
+                <div class="flex items-center justify-between border-b border-gray-100 px-8 py-5 bg-gray-50/50">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800" id="modalTitle">Pratinjau Dokumen</h3>
+                        <p class="text-xs text-slate-500" id="modalSubTitle">Kategori: Publikasi • Diunggah 12 Jan 2026</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button class="flex items-center gap-2 bg-white border border-gray-200 text-slate-600 px-4 py-2 rounded-xl text-xs font-bold hover:bg-gray-50 transition shadow-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            Unduh PDF
+                        </button>
+                        <button onclick="closePreviewModal()" class="text-slate-400 hover:text-slate-600 p-2 rounded-full hover:bg-gray-100 transition">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-slate-100 p-4 min-h-[600px] flex items-center justify-center">
+                    <div id="fileContainer" class="w-full h-[600px] bg-white rounded-xl shadow-inner border border-gray-200 flex items-center justify-center overflow-hidden">
+                        <div class="text-center">
+                            <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <p class="text-gray-400 font-medium">Memuat pratinjau dokumen...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-8 py-4 border-t border-gray-100 flex justify-end bg-white">
+                    <button onclick="closePreviewModal()" class="px-6 py-2 bg-slate-800 text-white rounded-xl text-sm font-bold hover:bg-slate-900 transition">Tutup Pratinjau</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         const sidebar = document.getElementById('sidebar');
         let sidebarVisible = true;
         let isIconOnly = false;
 
+        //modal preview file
+        function openPreviewModal(title, category, date) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalSubTitle').innerText = `Kategori: ${category.toUpperCase()} • Diunggah pada ${date}`;
+            document.getElementById('previewModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePreviewModal() {
+            document.getElementById('previewModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
 
         // Hide span from aside with cursor if cursor outside aside (Desktop Only)
         document.addEventListener('mousemove', (e) => {

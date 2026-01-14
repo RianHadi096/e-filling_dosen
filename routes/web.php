@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ReviewerController;
 
 
 //Route::get('/', function () {
@@ -30,3 +31,6 @@ Route::post('/dosen/login/authenticate', [LoginController::class, 'authenticateD
 Route::post('/dosen/logout', [LoginController::class, 'logout'])->name('/dosen/logout');
 
 Route::get('/dosen/profil', [DosenController::class, 'profile'])->name('dosen/profil');
+
+//REVIWER
+Route::get('/reviewer/dashboard', [ReviewerController::class, 'dashboard'])->name('reviewer/dashboard');
