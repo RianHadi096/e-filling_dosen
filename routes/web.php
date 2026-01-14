@@ -34,3 +34,9 @@ Route::get('/dosen/profil', [DosenController::class, 'profile'])->name('dosen/pr
 
 //REVIWER
 Route::get('/reviewer/dashboard', [ReviewerController::class, 'dashboard'])->name('reviewer/dashboard');
+Route::get('/reviewer/login', [LoginController::class, 'reviewerLogin'])->name('/reviewer/login');
+Route::post('/reviewer/login/authenticate', [LoginController::class, 'authenticateReviewer'])->name('/reviewer/login/authenticate');
+Route::post('/reviewer/logout', [LoginController::class, 'logout'])->name('/reviewer/logout');
+Route::get('/reviewer/histori_review', [ReviewerController::class, 'historiReview'])->name('reviewer/histori_review');
+Route::get('/reviewer/profil', [ReviewerController::class, 'profile'])->name('reviewer/profil');
+Route::get('/reviewer/review_dokumen', [ReviewerController::class, 'reviewDokumen'])->name('reviewer/review_dokumen');

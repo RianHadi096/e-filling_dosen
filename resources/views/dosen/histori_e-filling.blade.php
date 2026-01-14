@@ -148,7 +148,7 @@
                             <span class="px-3 py-1 text-[10px] font-bold uppercase bg-green-100 text-green-700 rounded-full">Selesai</span>
                         </td>
                         <td class="p-4 text-center text-sm cursor-pointer">
-                            <a onclick="openPreviewModal('Analisis Algoritma Optimasi pada AI', 'Publikasi Ilmiah', '12 Jan 2026', 'path/to/document.pdf')" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-2 ml-auto"">
+                            <a onclick="openPreviewModal('Analisis Algoritma Optimasi pada AI', 'Publikasi Ilmiah', '12 Jan 2026')" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-2 ml-auto"">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
                                     <path d="M10 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
                                     <path fill-rule="evenodd" d="M.664 10.59a1.651 1.651 0 0 1 0-1.186A10.004 10.004 0 0 1 10 3c4.257 0 7.893 2.66 9.336 6.41.147.381.146.804 0 1.186A10.004 10.004 0 0 1 10 17c-4.257 0-7.893-2.66-9.336-6.41ZM14 10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" clip-rule="evenodd" />
@@ -165,7 +165,7 @@
                             <span class="px-3 py-1 text-[10px] font-bold uppercase bg-yellow-100 text-yellow-700 rounded-full">Dalam Proses</span>
                         </td>
                         <td class="p-4 text-center text-sm cursor-pointer">
-                            <a onclick="openPreviewModal('Sertifikasi Cloud Architecture (AWS)', 'Sertifikasi', '10 Jan 2026', 'path/to/document.pdf')" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-2 ml-auto">
+                            <a onclick="openPreviewModal('Sertifikasi Cloud Architecture (AWS)', 'Sertifikasi', '10 Jan 2026')" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-2 ml-auto">
                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
                                     <path d="M10 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
                                     <path fill-rule="evenodd" d="M.664 10.59a1.651 1.651 0 0 1 0-1.186A10.004 10.004 0 0 1 10 3c4.257 0 7.893 2.66 9.336 6.41.147.381.146.804 0 1.186A10.004 10.004 0 0 1 10 17c-4.257 0-7.893-2.66-9.336-6.41ZM14 10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" clip-rule="evenodd" />
@@ -182,7 +182,7 @@
                             <span class="px-3 py-1 text-[10px] font-bold uppercase bg-red-100 text-red-700 rounded-full">Tertunda</span>
                         </td>
                         <td class="p-4 text-center text-blue-500 hover:underline text-sm cursor-pointer">
-                            <a onclick="openReuploadModal('Sertifikat Kompetensi Oracle')" class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-2 ml-auto">
+                            <a onclick="openReuploadModal('Pelatihan IT bagi UMKM Desa Sukamaju')" class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-2 ml-auto">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
                                     <path fill-rule="evenodd" d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Zm3.75-2.75a.75.75 0 0 0 1.5 0V9.66l1.95 2.1a.75.75 0 1 0 1.1-1.02l-3.25-3.5a.75.75 0 0 0-1.1 0l-3.25 3.5a.75.75 0 1 0 1.1 1.02l1.95-2.1v4.59Z" clip-rule="evenodd" />
                                 </svg>
@@ -194,6 +194,45 @@
             </table>
         </div>
     </main>
+
+    <!--modal lihat file-->
+    <div id="previewModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity"></div>
+
+        <div class="flex min-h-full items-center justify-center p-4">
+            <div class="relative w-full max-w-5xl rounded-3xl bg-white shadow-2xl transition-all overflow-hidden">
+                
+                <div class="flex items-center justify-between border-b border-gray-100 px-8 py-5 bg-gray-50/50">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800" id="modalTitle">Pratinjau Dokumen</h3>
+                        <p class="text-xs text-slate-500" id="modalSubTitle">Kategori: Publikasi • Diunggah 12 Jan 2026</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button class="flex items-center gap-2 bg-white border border-gray-200 text-slate-600 px-4 py-2 rounded-xl text-xs font-bold hover:bg-gray-50 transition shadow-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            Unduh PDF
+                        </button>
+                        <button onclick="closePreviewModal()" class="text-slate-400 hover:text-slate-600 p-2 rounded-full hover:bg-gray-100 transition">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-slate-100 p-4 min-h-[600px] flex items-center justify-center">
+                    <div id="fileContainer" class="w-full h-[600px] bg-white rounded-xl shadow-inner border border-gray-200 flex items-center justify-center overflow-hidden">
+                        <div class="text-center">
+                            <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <p class="text-gray-400 font-medium">Memuat pratinjau dokumen...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-8 py-4 border-t border-gray-100 flex justify-end bg-white">
+                    <button onclick="closePreviewModal()" class="px-6 py-2 bg-slate-800 text-white rounded-xl text-sm font-bold hover:bg-slate-900 transition">Tutup Pratinjau</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
      <!--modal reupload file-->
     <div id="reuploadModal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-4">
