@@ -1,3 +1,30 @@
+###################################################################################################################################
+DIBUAT OLEH:
+MUHAMAD RIAN HADIUTAMA 240656001
+HARRY PURNOMO 40622100191
+ILHAM AHMAD MUNAWAR 250656002
+
+###################################################################################################################################
+
+YANG DIBUTUHKAN: 
+- APLIKASI XAMPP DENGAN PHP VERSI 8.2 KEATAS
+- APLIKASI COMPOSER
+
+CARA INSTALASI:
+- DOWNLOAD APLIKASINYA DI GITHUB INI, JIKA FILE SUDAH DI KOMPRES(RAR ATAU ZIP),
+  MAKA EXTRACT KE FOLDER HTDOCS DARI XAMPP JIKA SUDAH TERINSTALASI (MISALKAN C:\XAMPP\htdocs\e-filling-dosen)
+- AKTIFKAN APACHE DAN MYSQL (SEMENTARA BACK-END BELUM DIIMPLEMENTASI)
+- BUKA TERMINAL (CMD ATAU POWERSHELL) LALU KETIKAN KODE "C:\XAMPP\htdocs\e-filling-dosen"
+- JALAN PERINTAH DENGAN KETIK "php artisan serve"
+- LALU BUKA BROWSER SEPERTI CHROME/OPERA DAN KETIKKAN http://127.0.0.1/
+- APLIKASI E-FILLING DOSEN (FRONT-END) SIAP DIIMPLEMENTASIKAN
+
+++++ BILA PERLU LINK UNTUK DASHBOARD (SEMUA ROLE):
+- http://127.0.0.1/dosen/dashboard (UNTUK ROLE DOSEN)
+- http://127.0.0.1/admin/dashboard (UNTUK ROLE ADMIN)
+- http://127.0.0.1/reviewer/dashboard (UNTUK ROLE REVIEWER)
+
+###################################################################################################################################
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
